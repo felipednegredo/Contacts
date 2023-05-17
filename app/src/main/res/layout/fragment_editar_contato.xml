@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contato.EditarFragment">
+
+    <!--edit text for user name-->
+    <EditText
+        android:id="@+id/idEdtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Insira o nome do contato"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <!--recycler view for phone numbers-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRvPhoneNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minHeight="48dp" />
+
+    <!--button for adding a new phone number-->
+    <Button
+        android:id="@+id/idBtnAddPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Adicionar Telefone"
+        android:textAllCaps="false" />
+
+    <!--button for saving changes-->
+    <Button
+        android:id="@+id/idBtnSaveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Salvar Alterações"
+        android:textAllCaps="false" />
+
+</LinearLayout>

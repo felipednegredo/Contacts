@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!--edit text for phone number-->
+    <EditText
+        android:id="@+id/idEdtPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:minHeight="48dp" />
+
+    <!--spinner for phone type-->
+    <Spinner
+        android:id="@+id/idSpnPhoneType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/phone_types"
+        android:minHeight="48dp" />
+
+    <!--button for removing phone number-->
+    <ImageButton
+        android:id="@+id/idBtnRemovePhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_remove"
+        android:contentDescription="@string/remover_telefone"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>
