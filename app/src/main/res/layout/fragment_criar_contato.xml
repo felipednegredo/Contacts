@@ -1,40 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".contato.AdicionarFragment">
+    android:layout_height="match_parent">
 
-    <!--edit text for user name-->
+    <!-- ImageView for user account -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Edit text for user name -->
     <EditText
-        android:id="@+id/idEdtName"
-        android:layout_width="match_parent"
+        android:id="@+id/editTextNome"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="Insira o nome do contato"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline1" />
 
-    <!--edit text for user phone number-->
+    <!-- Edit text for user phone number -->
     <EditText
-        android:id="@+id/idEdtPhoneNumber"
-        android:layout_width="match_parent"
+        android:id="@+id/editTextNumero"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:hint="Enter Number"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Insira o Número"
         android:inputType="phone"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
 
-
-    <!--button for saving a new contact-->
-    <Button
-        android:id="@+id/idBtnAddContact"
-        android:layout_width="match_parent"
+    <!-- Guideline for positioning the ImageView and EditTexts -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Save Contact"
-        android:textAllCaps="false" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
 
-</LinearLayout>
+    <!-- Button for saving a new contact -->
+    <Button
+        android:id="@+id/buttonAdicionar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Salvar Contato"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
