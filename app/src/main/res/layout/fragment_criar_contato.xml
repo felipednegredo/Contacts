@@ -17,7 +17,8 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <!-- Edit text for user name -->
     <EditText
@@ -27,27 +28,72 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Insira o nome do contato"
+        android:autofillHints=""
+        android:hint="@string/insira_o_nome_do_contato"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline1" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline1"
+        tools:ignore="VisualLintTextFieldSize" />
 
-    <!-- Edit text for user phone number -->
-    <EditText
-        android:id="@+id/editTextNumero"
+    <!-- LinearLayout for phone numbers -->
+    <LinearLayout
+        android:id="@+id/phoneNumbersLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Insira o Número"
-        android:inputType="phone"
-        android:minHeight="48dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome">
+
+        <!-- Edit text for user phone number -->
+        <EditText
+            android:id="@+id/idEdtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/insira_o_numero"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:textColorHint="#8D6E63"
+            android:autofillHints="" />
+
+        <!-- Spinner for phone type -->
+        <Spinner
+            android:id="@+id/idSpnPhoneType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:entries="@array/phone_types"
+            android:minHeight="48dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Button for removing phone number -->
+        <ImageButton
+            android:id="@+id/idBtnRemovePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/ic_remove" />
+
+    </LinearLayout>
+
+    <!-- Button for adding a new phone number -->
+    <Button
+        android:id="@+id/idBtnAddPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/adicionar_telefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumbersLayout" />
 
     <!-- Guideline for positioning the ImageView and EditTexts -->
     <androidx.constraintlayout.widget.Guideline
@@ -66,11 +112,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Salvar Contato"
+        android:text="@string/salvar_contato"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumero" />
+        app:layout_constraintTop_toBottomOf="@+id/idBtnAddPhoneNumber"
+        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

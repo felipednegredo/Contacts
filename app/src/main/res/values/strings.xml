@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Contatos</string>
     <string name="remover_telefone" />
+    <string name="nao" />
+    <string name="sim">\n</string>
+    <string name="dialog_excluir_contato">Deseja realmente excluir o contato?</string>
+    <string name="insira_o_nome_do_contato">Insira o nome do contato</string>
+    <string name="adicionar_telefone">Adicionar Telefone</string>
+    <string name="salvar_altera_es">Salvar Alterações</string>
+    <string name="excluir_contato">Excluir Contato</string>
+    <string name="insira_o_numero">Insira o Número</string>
+    <string name="salvar_contato">Salvar Contato</string>
 </resources>
