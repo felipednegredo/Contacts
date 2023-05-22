@@ -25,26 +25,18 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+     //open listar_contantos.xml and return it
+        View view = inflater.inflate(R.layout.fragment_listar_contatos, container, false);
 
-        View v = inflater.inflate(R.layout., container, false);
-        if (savedInstanceState == null) {
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameMae, new ListarFragment()).commit();
-        }
-        Button btnListar = v.findViewById(R.id.buttonListar);
-        btnListar.setOnClickListener(new View.OnClickListener() {
+        Button btAdicionar = view.findViewById(R.id.idFABadd);
+
+        btAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameMae, new	ListarFragment()).commit();
-            }
-        });
-        Button btnAdicionar = v.findViewById(R.id.buttonAdicionar);
-        btnAdicionar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameMae, new AdicionarFragment()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameMain, new AdicionarFragment()).commit();
             }
         });
 
-        return v;
+        return view;
     }
 }
