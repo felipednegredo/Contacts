@@ -29,10 +29,11 @@ public class MainFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_listar_contatos, container, false);
 
         Button btAdicionar = view.findViewById(R.id.idFABadd);
-
+        //set click listener
         btAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //open AdicionarFragment
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameMain, new AdicionarFragment()).commit();
             }
         });

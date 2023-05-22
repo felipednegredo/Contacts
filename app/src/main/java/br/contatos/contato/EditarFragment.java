@@ -37,5 +37,6 @@ public class EditarFragment extends Fragment {
     private Spinner etTipo;
 
     public EditarFragment() {
+
     }
 }
