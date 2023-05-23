@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import br.contatos.R;
 
 
@@ -28,7 +30,7 @@ public class MainFragment extends Fragment {
      //open listar_contantos.xml and return it
         View view = inflater.inflate(R.layout.fragment_listar_contatos, container, false);
 
-        Button btAdicionar = view.findViewById(R.id.idFABadd);
+        FloatingActionButton btAdicionar = view.findViewById(R.id.idFABadd);
         //set click listener
         btAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
